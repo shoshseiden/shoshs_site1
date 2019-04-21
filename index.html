@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>sjseiden websites | home</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="navigation">
+      <nav>
+        <a href="index.html">home</a> |
+        <a href="sites.html">sites</a> |
+        <a href="skills.html">skills</a> |
+        <a href="contact.html">contact</a>
+      </nav>
+    </div>
+
+    <h1>SJSeiden Websites</h1>
+
+    <div id="intro">
+      <h2>Introduction</h2>
+      <p>{{ introduction }}</p>
+    </div>
+
+    <br>
+
+    <div id="home-nav">
+      <h2>Links</h2>
+      <ul v-for="link in links">
+        <a v-bind:href="link.url">{{ link.name}}</a>
+      </ul>
+    </div>
+
+    <script>
+      var intro = new Vue ({
+        el: '#intro',
+        data: {
+          introduction: 'My name is Shosh Seiden, and I am a web developer. Please check out my work.'
+        }
+      })
+      var link = new Vue ({
+        el: '#home-nav',
+        data: {
+          links: [
+            {name: 'Web Sites', url: 'sites.html'},
+            {name: 'Skills', url: 'skills.html'},
+            {name: 'Contact Information', url: 'contact.html'}
+          ]
+        }
+      })
+    </script>
+    <style>
+      body{
+        background-image: url('assets/html_img.jpg');
+        background-color: black;
+      }
+      #navigation{
+        background-color: black;
+        border-style: solid;
+        border-color: gray;
+      }
+      #intro{
+        background: black;
+        border-style: solid;
+        border-color: gray;
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+      }
+      #home-nav{
+        background-color: black;
+        border-color: gray;
+        border-style: solid;
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+      }
+      h1, h2, h3, a, p {
+        color: #08d12d;
+      }
+      a:hover{
+        color: gray;
+      }
+    </style>
+  </body>
+</html>

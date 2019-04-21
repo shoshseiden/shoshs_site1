@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>sjseiden websites | sites</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="navigation">
+      <nav>
+        <a href="index.html">home</a> |
+        <a href="sites.html">sites</a> |
+        <a href="skills.html">skills</a> |
+        <a href="contact.html">contact</a>
+      </nav>
+    </div>
+
+    <h2>Sites</h2>
+
+    <div id="sites">
+      <ul v-for="website in websites">
+        <a v-bind:href="website.url">{{ website.name}}</a>
+      </ul>
+    </div>
+    <script>
+      var sites = new Vue ({
+        el: '#sites',
+        data:{
+          websites: [
+            {name: 'Pachyderm Publishing', url: 'http://www.pachydermpublishing.com'},
+            {name: 'C.A. Griggs Books: ', url: 'http://www.cagriggsbooks.com'}
+          ]
+        }
+      })
+    </script>
+    <style>
+      body{
+        background-image: url('assets/html_img.jpg');
+        background-color: black;
+      }
+      #navigation{
+        background-color: black;
+        border-style: solid;
+        border-color: gray;
+      }
+      #sites{
+        background: black;
+        border-style: solid;
+        border-color: gray;
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+        a{
+          color: #08d12d;
+        }
+      }
+      h1, h2, h3, a, p {
+        color: #08d12d;
+      }
+      a:hover{
+        color: gray;
+      }
+
+    </style>
+  </body>
+</html>

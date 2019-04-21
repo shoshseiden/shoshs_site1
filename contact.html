@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>sjseiden websites | contact</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="navigation">
+      <nav>
+        <a href="index.html">home</a> |
+        <a href="sites.html">sites</a> |
+        <a href="skills.html">skills</a> |
+        <a href="contact.html">contact</a>
+      </nav>
+    </div>
+
+    <h2>Contact Information</h2>
+
+    <div id="contact">
+      <h3>Please feel free to contact me using the following information</h3>
+      <p>Email: <a href="mailto:shosh.j.seiden@gmail.com">{{ email }}</a></p>
+      <p>Phone Number: {{ phone_number }}</p>
+    </div>
+
+    <script>
+      var contact = new Vue({
+        el: '#contact',
+        data:{
+          email: 'shosh.j.seiden@gmail.com',
+          phone_number: '720-999-2341'
+        }
+      })
+    </script>
+    <style>
+      body{
+        background-image: url('assets/html_img.jpg');
+        background-color: black;
+      }
+      #navigation{
+        background-color: black;
+        border-style: solid;
+        border-color: gray;
+      }
+      #contact{
+        background: black;
+        border-style: solid;
+        border-color: gray;
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+      }
+      a:hover{
+        color: gray;
+      }
+      h1, h2, h3, a, p {
+        color: #08d12d;
+      }
+    </style>
+  </body>
+</html>

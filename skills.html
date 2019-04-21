@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>sjseiden websites | skills</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="navigation">
+      <nav>
+        <a href="index.html">home</a> |
+        <a href="sites.html">sites</a> |
+        <a href="skills.html">skills</a> |
+        <a href="contact.html">contact</a>
+      </nav>
+    </div>
+
+    <h2>Skills</h2>
+
+    <div id="skills">
+      <ul v-for="skill in skills">
+        <li>{{ skill.name }}</li>
+      </ul>
+    </div>
+    <script>
+      var skills = new Vue({
+        el: '#skills',
+        data:{
+          skills: [
+            {name: 'HTML' },
+            {name: 'CSS'},
+            {name: 'JavaScript'},
+            {name: 'Django'},
+            {name: 'Python'},
+            {name: 'VueJS'}
+          ]
+        }
+      })
+    </script>
+    <style>
+      body{
+        background-image: url('assets/html_img.jpg');
+        background-color: black;
+      }
+      #navigation{
+        background-color: black;
+        border-style: solid;
+        border-color: gray;
+      }
+      #skills{
+        background: black;
+        border-style: solid;
+        border-color: gray;
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+      }
+      h1, h2, h3, a, p, li {
+        color: #08d12d;
+      }
+      a:hover{
+        color: gray;
+      }
+    </style>
+  </body>
+</html>
